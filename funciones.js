@@ -29,7 +29,6 @@ const botones = {
   ],
 };
 
-
 // Jardín de ejemplo
 const jardinEjemplo = {
   nombre: "De tuin der lusten",
@@ -49,7 +48,6 @@ const jardinEjemplo = {
 };
 
 // Guardar jardín
-
 function guardarJardin(jardin) {
   // guardar el ojbeto "jardin" en local storage
   localStorage.setItem("jardin", JSON.stringify(jardin));
