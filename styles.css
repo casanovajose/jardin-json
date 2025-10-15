@@ -1,0 +1,61 @@
+/* Importar tipografía divertida */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+/* Variables de configuración */
+:root{
+  --tamano-celda: 150px; /* tamaño de cada celda en la grilla */
+  --tamano-icono: 48px; /* tamaño de iconos en botones de navegación */
+}
+
+body{
+  margin:0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Fredoka', sans-serif;
+  min-height: 100vh;
+}
+ 
+/* Diseño general */
+.container{max-width:740px;margin:0 auto;padding:20px}
+h1{color:#fff;padding:12px;margin:0;font-family:'Fredoka',sans-serif;text-align:center;font-weight:600;font-size:2.5rem;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
+.autor-display{color:rgba(255,255,255,0.85);text-align:center;margin:4px 0 16px 0;font-family:'Georgia',serif;font-style:italic;font-size:1.1rem;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
+.controls{display:flex;flex-direction:column;gap:20px;padding:12px;align-items:center}
+.nav-group{color:#fff;font-family:'Fredoka',sans-serif;text-align:center;width:100%;max-width:600px}
+.nav-group h2{font-weight:500;font-size:1.3rem;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
+.note{color:rgba(255,255,255,0.9);margin:4px 0 8px 0;font-size:13px;font-weight:400;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
+.nav-items{display:flex;flex-wrap:wrap;gap:10px;max-height:180px;overflow-y:auto;padding:4px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,0.5) transparent}
+.nav-items .boton{width:52px;height:52px;border:2px solid #fff;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.2);cursor:pointer;padding:0;border-radius:8px;transition:all 0.2s ease}
+.nav-items .boton:hover{transform:scale(1.1);background:rgba(255,255,255,0.3)}
+.nav-items .boton.vacio{background:rgba(255,255,255,0.1);border:2px dashed rgba(255,255,255,0.5)}
+.nav-items .boton.activo{outline:none;border:3px solid #ffd700;box-shadow:0 0 12px rgba(255,215,0,0.6);transform:scale(1.15)}
+.nav-items .boton .icono{width:var(--tamano-icono);height:var(--tamano-icono);display:block;background-size:cover;background-position:center;image-rendering:pixelated;border-radius:4px}
+
+/* Estilos del scrollbar para webkit (Chrome, Safari) */
+.nav-items::-webkit-scrollbar{width:8px}
+.nav-items::-webkit-scrollbar-track{background:rgba(255,255,255,0.1);border-radius:4px}
+.nav-items::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.5);border-radius:4px}
+.nav-items::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.7)}
+
+/* Grilla */
+.grilla{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:8px;padding:16px;justify-content:center;width:600px;height:600px;background:rgba(255,255,255,0.15);border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.celda{position:relative;background:rgba(255,255,255,0.4);border:2px solid rgba(255,255,255,0.6);overflow:hidden;border-radius:8px;cursor:pointer;transition:all 0.2s ease}
+.celda:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+.celda .fondo,.celda .cosa{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;background-size:cover;background-position:center;image-rendering:pixelated}
+.celda .cosa{z-index:2}
+
+/* Información del jardín */
+.info-jardin{display:flex;flex-direction:column;gap:16px;margin-top:20px;width:600px;padding:20px;background:rgba(255,255,255,0.1);border-radius:12px}
+.campo{display:flex;flex-direction:column;gap:6px}
+.campo label{color:#fff;font-family:'Fredoka',sans-serif;font-size:0.95rem;font-weight:500;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
+.input-nombre,.input-autor{font-family:'Fredoka',sans-serif;font-size:1.1rem;padding:12px 16px;border:2px solid rgba(255,255,255,0.6);background:rgba(255,255,255,0.25);color:#fff;border-radius:8px;transition:all 0.2s ease}
+.input-nombre{font-weight:600;font-size:1.2rem}
+.input-nombre:focus,.input-autor:focus{outline:none;border-color:#ffd700;box-shadow:0 0 12px rgba(255,215,0,0.4);background:rgba(255,255,255,0.35)}
+.boton-guardar{font-family:'Fredoka',sans-serif;font-size:1.1rem;font-weight:600;padding:14px 24px;border:2px solid #ffd700;background:rgba(255,215,0,0.25);color:#fff;border-radius:10px;cursor:pointer;transition:all 0.2s ease;text-shadow:1px 1px 2px rgba(0,0,0,0.2)}
+.boton-guardar:hover{background:rgba(255,215,0,0.4);transform:translateY(-2px);box-shadow:0 4px 16px rgba(255,215,0,0.4)}
+.boton-guardar:active{transform:translateY(0);box-shadow:0 2px 8px rgba(255,215,0,0.3)}
+
+/* Centrar contenido */
+body > .container{display:flex;flex-direction:column;align-items:center}
+
+/* Ajuste responsivo */
+@media (min-width:600px){.grilla{gap:10px}}
+

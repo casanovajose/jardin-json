@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jardincito</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo-jardin">Jardincito</h1>
+    <p class="autor-display" id="autor-display"></p>
+    <nav class="controls">
+    <div class="nav-group" id="nav-fondos">
+      <h2>Fondos</h2>
+      <div class="nav-items" data-type="fondos"></div>
+    </div>
+
+    <div class="nav-group" id="nav-cosas">
+      <h2>Cosas</h2>
+      <div class="nav-items" data-type="cosas"></div>
+    </div>
+  </nav>
+
+  <div class="grilla" id="grilla">
+    <div class="celda" id="0"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="1"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="2"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="3"><div class="fondo"></div><div class="cosa"></div></div>
+
+    <div class="celda" id="4"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="5"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="6"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="7"><div class="fondo"></div><div class="cosa"></div></div>
+
+    <div class="celda" id="8"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="9"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="10"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="11"><div class="fondo"></div><div class="cosa"></div></div>
+
+    <div class="celda" id="12"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="13"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="14"><div class="fondo"></div><div class="cosa"></div></div>
+    <div class="celda" id="15"><div class="fondo"></div><div class="cosa"></div></div>
+    </div>
+
+    <div class="info-jardin">
+      <div class="campo">
+        <label for="nombre-jardin">Nombre del jardín</label>
+        <input type="text" id="nombre-jardin" class="input-nombre">
+      </div>
+      <div class="campo">
+        <label for="autor-jardin">Autor</label>
+        <input type="text" id="autor-jardin" class="input-autor">
+      </div>
+      <button class="boton-guardar" id="guardar-jardin">Guardar jardín</button>
+    </div>
+  </div>
+  <script src="funciones.js"></script>
+</body>
+</html>
